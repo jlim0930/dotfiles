@@ -12,7 +12,7 @@ install:
 ifneq "$(wildcard $(VIM) )" ""
 	mv ~/.vim ~/.vim.old
 endif
-	cp -rf vim ~/.vim
+	mkdir ~/.vim
 
 ifneq "$(wildcard $(VIMRC) )" ""
 	mv ~/.vimrc ~/.vimrc.old
