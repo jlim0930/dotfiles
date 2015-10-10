@@ -39,6 +39,10 @@ if [ -x /usr/bin/dircolors ]; then
   alias dmesg='dmesg --color'
 fi
 
+if [ -x /usr/bin/vim ]; then
+  alias vi='/usr/bin/vim'
+fi
+
 
 # FUNCTIONS
 function backup() {
