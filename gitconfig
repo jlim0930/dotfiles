@@ -11,5 +11,3 @@
   editor=/usr/bin/vim
 [push]
   default = simple
-[init]
-  templatedir = ~/.git_template
