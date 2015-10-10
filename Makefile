@@ -5,6 +5,7 @@ SSHCONFIG=~/.ssh/config
 SCREENRC=~/.screenrc
 BASHRC=~/.bashrc
 GITCONFIG=~/.gitconfig
+DIRCOLOR=~/.dir_colors
 
 all: install
 
@@ -36,7 +37,7 @@ endif
 	cp -rf screenrc ~/.screenrc
 
 ifneq "$(wildcard $(BASHRC) )" ""
-	mv ~/.bashrc ~/.bashrc.old
+	mv ~/.bashrc ~/.bashrc.local
 endif
 	cp -rf bashrc ~/.bashrc
 
@@ -44,3 +45,8 @@ ifneq "$(wildcard $(GITCONFIG) )" ""
 	mv ~/.gitconfig ~/.gitconfig.old
 endif
 	cp -rf gitconfig ~/.gitconfig
+
+ifneq "$(wildcard $(DIRCOLOR) )" ""
+	mv ~/.dir_colors ~/.dir_colors.old
+endif
+	cp -rf dir_colors ~/.dir_colors

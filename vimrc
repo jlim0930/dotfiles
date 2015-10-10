@@ -1,3 +1,4 @@
+" .vimrc
 " Justin Lim <justin@isthecoolest.ninja> github.com/jlim0930
 "
 "  COLORS
