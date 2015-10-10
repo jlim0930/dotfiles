@@ -1,0 +1,15 @@
+[user]
+  name = Justin Lim
+  email = jlim0930@gmail.com
+[color]
+  ui = true
+  status = auto
+[diff]
+  tool = vimdiff
+  algorithm = patience
+[core]
+  editor=/usr/bin/vim
+[push]
+  default = simple
+[init]
+  templatedir = ~/.git_template

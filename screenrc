@@ -1,0 +1,35 @@
+# .screenrc
+#
+# default
+shell           bash
+autodetach      on
+defutf8         on
+deflogin        off
+startup_message off
+nethack         on
+defscrollback   5000
+
+activity        "activity in %n (%t)"
+bell_msg        "bell in %n (%t)"
+defhstatus      "screen: ^En (^Et)"
+shelltitle      "$ |sh:"
+term            $TERM
+
+vbell           on
+vbell_msg       "uhHHH????"
+vbellwait       1
+
+# STATUSPANEL
+hardstatus alwayslastline
+hardstatus string '%{= kG}[%{G}%H%? %1`%?%{g}][%= %{= kw}%-w%{+b yk} %n*%t%?(%u)%? %{-}%+w %=%{g}][%{B}%m/%d %{W}%C%A%{g}]'
+
+
+
+screen -t shell01 bash
+screen -t shell02 bash
+select shell01
+split -v
+focus right
+select shell02
+resize -25
+focus left
