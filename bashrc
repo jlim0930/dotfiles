@@ -1,14 +1,10 @@
 # .bashrc
 # Justin Lim <justin@isthecoolest.ninja> github.com/jlim0930
 #
-if [ -f ~/.bashrc.local ]; then
-  source ~/.bashrc.local
-fi
-
 # load local bashrc if it exists
-if [ -f ~/.bashrc.local ]; then
-  . ~/.bashrc.local
-fi
+#if [ -f ~/.bashrc.local ]; then
+#  . ~/.bashrc.local
+#fi
 
 # load local aliases if it exists
 if [ -f ~/.bash_aliases ]; then
@@ -75,4 +71,5 @@ export EDITOR
 
 
 # PROMPTS
-export PS1='[\u@\h \W]\$ '
+export PS1="$(if [[ ${EUID} == 0 ]]; then echo '\[\033[01;31m\]\h'; else echo '\[\033[01;32m\]\u@\h'; fi)\[\033[01;34m\] \w \$([[ \$? != 0 ]] && echo \"\[\033[01;31m\]:(\[\033[01;34m\] \")\\$\[\033[00m\] "
+export PS1="\[$(tput setaf 7)\][\`nonzero_return\`] \[$(tput setaf 2)\]\u@\[$(tput setaf 4)\]\h \[$(tput setaf 3)\]\w \\$ \[$(tput sgr0)\]"
